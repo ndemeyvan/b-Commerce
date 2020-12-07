@@ -23,6 +23,7 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
               ),
             ),
           ),
+          //loverlay
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
@@ -40,7 +41,6 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
             ),
           ),
           Column(
-            //mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: MediaQuery.of(context).size.height / 2.6),
@@ -51,6 +51,7 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
                     fontSize: 28.0,
                     color: Colors.white60,
                     letterSpacing: 2,
+
                   ),
                 ),
               ),
