@@ -18,7 +18,7 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/images/bana.jpg'),
+                image: AssetImage('assets/images/choosebackground.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -46,7 +46,7 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
               SizedBox(height: MediaQuery.of(context).size.height / 2.6),
               Center(
                 child: Text(
-                  "E-COMMERCE",
+                  "B-COMMERCE",
                   style: TextStyle(
                     fontSize: 28.0,
                     color: Colors.white60,
@@ -91,7 +91,7 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
                         vertical: 14.0,
                       ),
                       child: Text(
-                        'Log in',
+                        'Sign in',
                         style: TextStyle(color: Colors.white, fontSize: 18.0),
                       ),
                     ),
