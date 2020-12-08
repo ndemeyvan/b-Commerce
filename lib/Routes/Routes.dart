@@ -1,5 +1,6 @@
 
 import 'package:chat_screen/screens/ChooseSignInOrSignUp.dart';
+import 'package:chat_screen/screens/SigninScreen.dart';
 import 'package:chat_screen/screens/SplashScreen.dart';
 import 'package:flutter/material.dart';
 class Routes {
@@ -13,6 +14,11 @@ class Routes {
         return MaterialPageRoute<Widget>(
             builder: (context) => ChooseSignInOrSignUp());
         break;
+      case SignInScreen.id:
+        return MaterialPageRoute<Widget>(
+            builder: (context) => SignInScreen());
+        break;
+
       default:
         return MaterialPageRoute(
           builder: (_) => Scaffold(

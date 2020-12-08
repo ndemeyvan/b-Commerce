@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'B. commerce',
       theme: ThemeData(
         fontFamily: "Nunito",
+
       ),
       home: SplashScreen(),
     );

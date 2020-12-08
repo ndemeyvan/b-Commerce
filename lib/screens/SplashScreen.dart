@@ -56,12 +56,12 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
-                  "B-COMMERCE",
+                  "B-commerce",
                   style: TextStyle(
                     fontSize: 28.0,
                     color: Colors.white60,
                     letterSpacing: 2,
-
+                      fontFamily: "Pacifico"
                   ),
                 ),
                 SizedBox(height: 25,)

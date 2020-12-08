@@ -1,8 +1,11 @@
+import 'package:chat_screen/Components/CustumButton.dart';
+import 'package:chat_screen/screens/SigninScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
+import '../utils/Colors.dart';
 
 class ChooseSignInOrSignUp extends StatefulWidget {
   static const String id = "ChooseSignInOrSignUpScreen";
+
   ChooseSignInOrSignUp({Key key}) : super(key: key);
 
   @override
@@ -46,12 +49,12 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
               SizedBox(height: MediaQuery.of(context).size.height / 2.6),
               Center(
                 child: Text(
-                  "B-COMMERCE",
+                  "B-commerce",
                   style: TextStyle(
-                    fontSize: 28.0,
+                    fontSize: 45.0,
                     color: Colors.white60,
                     letterSpacing: 2,
-
+                    fontFamily: "Pacifico"
                   ),
                 ),
               ),
@@ -80,46 +83,21 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
               ),
               Spacer(),
               Center(
-                child: Container(
-                  width: MediaQuery.of(context).size.width / 1.4,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0)),
-                    onPressed: () {},
-                    color: Colors.blue,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 14.0,
-                      ),
-                      child: Text(
-                        'Sign in',
-                        style: TextStyle(color: Colors.white, fontSize: 18.0),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+                  child: CustomButton(
+                    textColor: white,
+                      buttonColor: orange,
+                      pressEvent: () {
+                        Navigator.of(context)
+                            .pushReplacementNamed(SignInScreen.id);
+                      },
+                      buttonText: 'Sign in')),
               SizedBox(height: 10.0),
               Center(
-                child: Container(
-                  width: MediaQuery.of(context).size.width / 1.4,
-                  child: RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0)),
-                    onPressed: () {},
-                    color: Colors.white,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 14.0,
-                      ),
-                      child: Text(
-                        'Sign up',
-                        style: TextStyle(fontSize: 18.0),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+                  child: CustomButton(
+                    textColor: white,
+                      buttonColor: blue,
+                      pressEvent: () {},
+                      buttonText: 'Sign up')),
               SizedBox(height: 30.0),
             ],
           )
