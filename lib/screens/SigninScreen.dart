@@ -1,4 +1,5 @@
 import 'package:chat_screen/Components/CustumButton.dart';
+import 'package:chat_screen/screens/HomeScreen.dart';
 import 'package:chat_screen/screens/SignUpScreen.dart';
 
 import '../utils/Colors.dart';
@@ -113,8 +114,8 @@ class _SignInScreenState extends State<SignInScreen> {
                               pressEvent: () {
                                 if (_formKey.currentState.validate()) {
                                   // If the form is valid, display a Snackbar.
-                                  Scaffold.of(context).showSnackBar(
-                                      SnackBar(content: Text('Processing Data')));
+                                  Navigator.of(context)
+                                      .pushReplacementNamed(HomeScreen.id);
                                 }
                               },
                               buttonText: "Login",

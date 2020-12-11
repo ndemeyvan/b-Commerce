@@ -104,7 +104,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 ),
                             validator: (value) {
                               if (value.isEmpty) {
-                                return 'Please enter your email';
+                                return "Please enter your email address";
+                              }
+                              final emailExp = RegExp(
+                                  r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+                              if (!emailExp.hasMatch(value)) {
+                                return "Invalid address";
                               }
                               return null;
                             },

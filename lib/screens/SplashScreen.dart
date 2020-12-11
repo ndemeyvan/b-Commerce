@@ -24,12 +24,13 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Stack(
         children: [   Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/images/shop.jpeg'),
-              fit: BoxFit.cover,
-            ),
-          ),
+          color: white,
+          // decoration: BoxDecoration(
+          //   image: DecorationImage(
+          //     image: AssetImage('assets/images/shop.jpeg'),
+          //     fit: BoxFit.cover,
+          //   ),
+          // ),
 
         ),
 
@@ -44,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Alignment.bottomCenter.x,
                     1 - Alignment.bottomCenter.y,
                   ),
-                  colors: [Colors.black, Colors.black.withOpacity(0.2)],
+                  colors: [white, white],
                 ),
               ),
             ),
@@ -55,10 +56,10 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Text(
-                  "B-commerce",
+                  "B-commerce.",
                   style: TextStyle(
                     fontSize: 28.0,
-                    color: Colors.white60,
+                    color:black,
                     letterSpacing: 2,
                       fontFamily: "Pacifico"
                   ),
