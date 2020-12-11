@@ -1,18 +1,18 @@
 import 'package:chat_screen/Components/CustumButton.dart';
-import 'package:chat_screen/screens/SignUpScreen.dart';
+import 'package:chat_screen/screens/SigninScreen.dart';
 
 import '../utils/Colors.dart';
 import 'package:flutter/material.dart';
 import '../utils/ScreenHeightAndWidth.dart';
 
-class SignInScreen extends StatefulWidget {
-  static const String id = "SignInScreen";
+class SignUpScreen extends StatefulWidget {
+  static const String id = "SignUpScreen";
 
   @override
-  _SignInScreenState createState() => _SignInScreenState();
+  _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _SignInScreenState extends State<SignInScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   ///////////////Variable Section
   // Create a global key that uniquely identifies the Form widget
   // and allows validation of the form.
@@ -31,7 +31,7 @@ class _SignInScreenState extends State<SignInScreen> {
           height: screenHeight(context),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/bgLogin.jpeg'),
+              image: AssetImage('assets/images/registrationBb.jpg'),
               fit: BoxFit.cover,
             ),
           ),
@@ -42,7 +42,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    ("Welcome back."),
+                    ("Create Account."),
                     style: TextStyle(
                         color: white,
                         fontWeight: FontWeight.bold,
@@ -94,6 +94,34 @@ class _SignInScreenState extends State<SignInScreen> {
                                   borderSide: BorderSide(color: white),
                                   //  when the TextFormField in focused
                                 ),
+                                icon: Icon(
+                                  Icons.email,
+                                  color: white,
+                                ),
+                                hintText: 'Enter your email',
+                                hintStyle: new TextStyle(color: white)
+                                // labelText: 'User name',
+                                ),
+                            validator: (value) {
+                              if (value.isEmpty) {
+                                return 'Please enter your email';
+                              }
+                              return null;
+                            },
+                          ),
+                          SizedBox(
+                            height: screenHeight(context) * 0.03,
+                          ),
+                          TextFormField(
+                            decoration: InputDecoration(
+                                enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: white),
+                                  //  when the TextFormField in unfocused
+                                ),
+                                focusedBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: white),
+                                  //  when the TextFormField in focused
+                                ),
                                 icon: Icon(Icons.lock, color: white),
                                 hintText: 'Enter your password',
                                 hintStyle: new TextStyle(color: white)
@@ -117,27 +145,35 @@ class _SignInScreenState extends State<SignInScreen> {
                                       SnackBar(content: Text('Processing Data')));
                                 }
                               },
-                              buttonText: "Login",
-                              buttonColor: white,
-                              textColor: black),
+                              buttonText: "Register",
+                              buttonColor: black,
+                              textColor: white),
                           SizedBox(
                             height: screenHeight(context) * 0.03,
                           ),
                           FlatButton(
-                            onPressed: (){
+                            onPressed: () {
+                              //goto sign up page
                               Navigator.of(context)
-                                  .pushReplacementNamed(SignUpScreen.id);
+                                  .pushReplacementNamed(SignInScreen.id);
                             },
                             child: RichText(
                               text: TextSpan(
                                 style: TextStyle(fontSize: 10),
                                 children: <TextSpan>[
-                                  TextSpan(text: 'You do not have an account? ', ),
-                                  TextSpan(text: 'Create an account!',style: TextStyle(fontWeight: FontWeight.bold,color: orange)),
+                                  TextSpan(
+                                    text: 'Already have an account? ',
+                                  ),
+                                  TextSpan(
+                                      text: 'Sign in !',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: orange)),
                                 ],
                               ),
                             ),
-                          )                      ],
+                          )
+                        ],
                       ))
                 ],
               ),

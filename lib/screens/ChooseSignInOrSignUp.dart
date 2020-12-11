@@ -1,4 +1,5 @@
 import 'package:chat_screen/Components/CustumButton.dart';
+import 'package:chat_screen/screens/SignUpScreen.dart';
 import 'package:chat_screen/screens/SigninScreen.dart';
 import 'package:flutter/material.dart';
 import '../utils/Colors.dart';
@@ -38,7 +39,7 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
                     Alignment.bottomCenter.x,
                     1 - Alignment.bottomCenter.y,
                   ),
-                  colors: [Colors.black, Colors.black.withOpacity(0.2)],
+                  colors: [white, Colors.black.withOpacity(0.2)],
                 ),
               ),
             ),
@@ -51,11 +52,10 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
                 child: Text(
                   "B-commerce",
                   style: TextStyle(
-                    fontSize: 45.0,
-                    color: Colors.white60,
-                    letterSpacing: 2,
-                    fontFamily: "Pacifico"
-                  ),
+                      fontSize: 45.0,
+                      color: Colors.white60,
+                      letterSpacing: 2,
+                      fontFamily: "Pacifico"),
                 ),
               ),
               SizedBox(height: 70.0),
@@ -84,8 +84,8 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
               Spacer(),
               Center(
                   child: CustomButton(
-                    textColor: white,
-                      buttonColor: orange,
+                      textColor: black,
+                      buttonColor: white,
                       pressEvent: () {
                         Navigator.of(context)
                             .pushReplacementNamed(SignInScreen.id);
@@ -94,9 +94,12 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
               SizedBox(height: 10.0),
               Center(
                   child: CustomButton(
-                    textColor: white,
-                      buttonColor: blue,
-                      pressEvent: () {},
+                      textColor: white,
+                      buttonColor: black,
+                      pressEvent: () {
+                        Navigator.of(context)
+                            .pushReplacementNamed(SignUpScreen.id);
+                      },
                       buttonText: 'Sign up')),
               SizedBox(height: 30.0),
             ],

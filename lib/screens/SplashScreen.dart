@@ -18,7 +18,6 @@ class _SplashScreenState extends State<SplashScreen> {
       Navigator.of(context).pushReplacementNamed(ChooseSignInOrSignUp.id);
     });
   }
-
   ////////////Screen
   @override
   Widget build(BuildContext context) {
