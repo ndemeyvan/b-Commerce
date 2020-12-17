@@ -1,15 +1,15 @@
 List pull = [
   {
-    'name': "pull over en laine",
+    'name': "Afro shoes",
     'price': 9000,
     'image':
-        "https://i.pinimg.com/564x/3a/32/b2/3a32b2e3e76eaeaf89e14187a7ad50d7.jpg",
-    'color': 'Yellow',
+        "https://i.pinimg.com/236x/89/57/db/8957db0c3af1f7f5363492d824b35a4c.jpg",
+    'color': 'Orange',
     'description':
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    'name': "pull over  max james",
+    'name': "pull over",
     'price': 8000,
     'image':
         "https://i.pinimg.com/564x/e1/2c/34/e12c34d5145a5491cc46a16a82efa07e.jpg",
@@ -18,10 +18,10 @@ List pull = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    'name': "pull over Omega",
+    'name': "Trouser Omega",
     'price': 1600,
     'image':
-        "https://i.pinimg.com/564x/cd/bb/33/cdbb333973458b371c0d86d75f45fbba.jpg",
+        "https://i.pinimg.com/236x/dc/53/16/dc53168dbfb793b62ad30ac5147882da.jpg",
     'color': 'Blue',
     'description':
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
@@ -39,16 +39,16 @@ List pull = [
 
 List shirt = [
   {
-    'name': "White shirt",
+    'name': "Afro shirt 1",
     'price': 600,
     'image':
-        "https://i.pinimg.com/564x/cc/b8/6a/ccb86af3c6db37989f9c0db5576a391c.jpg",
-    'color': 'White',
+        "https://i.pinimg.com/236x/f2/14/47/f214471c6988b1555c5e877556e5358b.jpg",
+    'color': 'Reinbow',
     'description':
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    'name': "Shirt pack",
+    'name': "Shirt pack 2",
     'price': 1000,
     'image':
         "https://i.pinimg.com/564x/1b/b1/cb/1bb1cb9c530e6b2e722d469482491c80.jpg",
@@ -57,7 +57,7 @@ List shirt = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    'name': "Afro shirt",
+    'name': "Afro shirt 3",
     'price': 1500,
     'image':
         "https://i.pinimg.com/564x/2f/fe/4d/2ffe4d93ed5e399ca33a5c7fc4750989.jpg",
@@ -66,7 +66,7 @@ List shirt = [
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    'name': "Afro shirt",
+    'name': "Afro shirt 4",
     'price': 8000,
     'image':
         "https://i.pinimg.com/564x/29/03/7d/29037d701d8e3e4576c9677e6e357e04.jpg",
@@ -78,39 +78,39 @@ List shirt = [
 
 
 
-List trousers = [
+List shoes = [
   {
-    'name': "White shirt",
+    'name': "Afro shoes 1",
     'price': 600,
     'image':
-    "https://i.pinimg.com/564x/cc/b8/6a/ccb86af3c6db37989f9c0db5576a391c.jpg",
+    "https://i.pinimg.com/236x/87/00/a4/8700a4da73044ee888688a7225288869.jpg",
     'color': 'White',
     'description':
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    'name': "Shirt pack",
+    'name': "Afro shoes 2",
     'price': 1000,
     'image':
-    "https://i.pinimg.com/564x/1b/b1/cb/1bb1cb9c530e6b2e722d469482491c80.jpg",
+    "https://i.pinimg.com/236x/89/57/db/8957db0c3af1f7f5363492d824b35a4c.jpg",
     'color': 'Rainbow',
     'description':
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    'name': "Afro shirt",
+    'name': "Afro shoes 3",
     'price': 1500,
     'image':
-    "https://i.pinimg.com/564x/2f/fe/4d/2ffe4d93ed5e399ca33a5c7fc4750989.jpg",
+    "https://i.pinimg.com/236x/30/9c/35/309c35a90e156c561b4b7352ee6d2863.jpg",
     'color': 'Purple',
     'description':
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   },
   {
-    'name': "Afro shirt",
+    'name': "Afro shoes 4",
     'price': 8000,
     'image':
-    "https://i.pinimg.com/564x/29/03/7d/29037d701d8e3e4576c9677e6e357e04.jpg",
+    "https://i.pinimg.com/236x/fa/69/aa/fa69aa52dd1cbba2e6d2bce1c05eb892.jpg",
     'color': 'Blue',
     'description':
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'

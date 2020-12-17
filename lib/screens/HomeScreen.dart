@@ -228,6 +228,28 @@ class _HomeScreenState extends State<HomeScreen> {
               articles: shirt,
               size: MediaQuery.of(context).size,
             ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    height: 20,
+                  ),
+                  CategorySeparator(
+                    title: 'Shoes',
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                ],
+              ),
+            ),
+            ListOFDress(
+              articles: shoes,
+              size: MediaQuery.of(context).size,
+            ),
             SizedBox(
               height: 50,
             ),
