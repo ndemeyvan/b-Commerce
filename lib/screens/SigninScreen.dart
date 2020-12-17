@@ -115,7 +115,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                 if (_formKey.currentState.validate()) {
                                   // If the form is valid, display a Snackbar.
                                   Navigator.of(context)
-                                      .pushReplacementNamed(HomeScreen.id);
+                                      .pushNamed(HomeScreen.id);
                                 }
                               },
                               buttonText: "Login",

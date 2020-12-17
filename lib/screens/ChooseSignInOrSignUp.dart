@@ -88,7 +88,7 @@ class _ChooseSignInOrSignUpState extends State<ChooseSignInOrSignUp> {
                       buttonColor: white,
                       pressEvent: () {
                         Navigator.of(context)
-                            .pushReplacementNamed(SignInScreen.id);
+                            .pushNamed(SignInScreen.id);
                       },
                       buttonText: 'Sign in')),
               SizedBox(height: 10.0),

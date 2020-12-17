@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:chat_screen/screens/DetailScreen.dart';
 import 'package:chat_screen/utils/List.dart';
 import 'package:chat_screen/utils/ScreenHeightAndWidth.dart';
 import 'package:flutter/material.dart';
@@ -303,76 +304,82 @@ class ListOFDress extends StatelessWidget {
         itemCount: pull.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return Card(
-            elevation: 1,
-            child: ClipRRect(
-              borderRadius: BorderRadius.all(Radius.circular(5.0)),
-              child: Stack(children: [
-                Container(
-                  width: screenWidth(context) * 0.8,
-                  child: Image.network(
-                    '${articles[index]['image']}',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Positioned(
-                    right: 10,
-                    top: 10,
-                    child: Container(
-                      width: 25,
-                      height: 25,
-                      decoration: BoxDecoration(
-                          color: white,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Icon(Icons.favorite,
-                          color: (index % 2) == 0 ? orange : grey, size: 15),
-                    )),
-                Positioned(
-                  bottom: 0.0,
-                  left: 0.0,
-                  right: 0.0,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [
-                          Color.fromARGB(200, 0, 0, 0),
-                          Color.fromARGB(0, 0, 0, 0)
-                        ],
-                        begin: Alignment.bottomCenter,
-                        end: Alignment.topCenter,
-                      ),
+          return GestureDetector(
+            onTap: (){
+              Navigator.of(context)
+                  .pushNamed(DetailScreen.id);
+            },
+            child: Card(
+              elevation: 1,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                child: Stack(children: [
+                  Container(
+                    width: screenWidth(context) * 0.8,
+                    child: Image.network(
+                      '${articles[index]['image']}',
+                      fit: BoxFit.cover,
                     ),
-                    padding:
-                        EdgeInsets.symmetric(vertical: 45.0, horizontal: 45.0),
                   ),
-                ),
-                Positioned(
-                    bottom: 10,
-                    left: 10,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('${articles[index]['name']}',
-                            style: TextStyle(
-                                color: white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold)),
-                      ],
-                    )),
-                Positioned(
-                    bottom: 10,
-                    right: 10,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('${articles[index]['price']} \$',
-                            style: TextStyle(
-                                color: orange,
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold))
-                      ],
-                    )),
-              ]),
+                  Positioned(
+                      right: 10,
+                      top: 10,
+                      child: Container(
+                        width: 25,
+                        height: 25,
+                        decoration: BoxDecoration(
+                            color: white,
+                            borderRadius: BorderRadius.circular(20)),
+                        child: Icon(Icons.favorite,
+                            color: (index % 2) == 0 ? orange : grey, size: 15),
+                      )),
+                  Positioned(
+                    bottom: 0.0,
+                    left: 0.0,
+                    right: 0.0,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(200, 0, 0, 0),
+                            Color.fromARGB(0, 0, 0, 0)
+                          ],
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                        ),
+                      ),
+                      padding:
+                          EdgeInsets.symmetric(vertical: 45.0, horizontal: 45.0),
+                    ),
+                  ),
+                  Positioned(
+                      bottom: 10,
+                      left: 10,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('${articles[index]['name']}',
+                              style: TextStyle(
+                                  color: white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold)),
+                        ],
+                      )),
+                  Positioned(
+                      bottom: 10,
+                      right: 10,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('${articles[index]['price']} \$',
+                              style: TextStyle(
+                                  color: orange,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold))
+                        ],
+                      )),
+                ]),
+              ),
             ),
           );
         },
