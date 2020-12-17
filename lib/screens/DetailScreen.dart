@@ -133,7 +133,7 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Center(
               child: CustomButton(
