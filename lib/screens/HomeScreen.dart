@@ -51,6 +51,13 @@ class _HomeScreenState extends State<HomeScreen> {
     imageSliders = imgList.map((item) {
       return Container(
         margin: EdgeInsets.all(5.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
+          // boxShadow: [
+          //   BoxShadow(color: Colors.green, spreadRadius: 3),
+          // ],
+        ),
         child: ClipRRect(
             child: Stack(
           children: <Widget>[
@@ -194,7 +201,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 20,
                   ),
                   CategorySeparator(
-                    title: 'New pull',
+                    title: 'New Release',
                   ),
                   SizedBox(
                     height: 20,
@@ -283,14 +290,23 @@ class ListOFDress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+        color: Colors.white,
+        // boxShadow: [
+        //   BoxShadow(color: Colors.green, spreadRadius: 3),
+        // ],
+      ),
       width: size.width,
       height: 200,
       child: ListView.builder(
         itemCount: pull.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return Padding(
-              padding: EdgeInsets.only(left: 10),
+          return Card(
+            elevation: 1,
+            child: ClipRRect(
+              borderRadius: BorderRadius.all(Radius.circular(5.0)),
               child: Stack(children: [
                 Container(
                   width: screenWidth(context) * 0.8,
@@ -356,7 +372,9 @@ class ListOFDress extends StatelessWidget {
                                 fontWeight: FontWeight.bold))
                       ],
                     )),
-              ]));
+              ]),
+            ),
+          );
         },
       ),
     );
