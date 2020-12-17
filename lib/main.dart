@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: Routes.generateRoute,
       title: 'B. commerce',
       theme: ThemeData(
-        fontFamily: "Nunito",
+        fontFamily: "Monsera",
 
       ),
       home: SplashScreen(),

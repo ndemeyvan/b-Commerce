@@ -74,9 +74,9 @@ flutter:
         - asset: assets/fonts/Pacifico.ttf
     #       - asset: fonts/Schyler-Italic.ttf
     #         style: italic
-    - family: Nunito
+    - family: Monsera
       fonts:
-        - asset: assets/fonts/Nunito.ttf
+        - asset: assets/fonts/Monsera.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
