@@ -1,5 +1,8 @@
+import 'package:bouncing_widget/bouncing_widget.dart';
+import 'package:chat_screen/Components/CustumButton.dart';
 import 'package:chat_screen/utils/List.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../utils/Colors.dart';
 import 'package:chat_screen/utils/ScreenHeightAndWidth.dart';
@@ -25,6 +28,18 @@ class _CartScreenState extends State<CartScreen> {
         title: Text(
           "Cart List",
           style: TextStyle(color: black, fontWeight: FontWeight.bold),
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: CustomButton(
+              pressEvent: () {
+                //go to buy cart element
+              },
+              buttonText: "Checkout",
+              buttonColor: black,
+              textColor: white),
         ),
       ),
       body: ListView.builder(
@@ -90,15 +105,61 @@ class _CartScreenState extends State<CartScreen> {
                             ],
                           ),
                         ),
-                        FlatButton(
-                            onPressed: () {
-                              //remove this item to wishlist
-                            },
-                            child: Text(
-                              "Remove",
-                              style: TextStyle(
-                                  color: orange, fontWeight: FontWeight.bold),
-                            ))
+                        Container(
+                          decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5)),
+                              border: Border.all(
+                                  width: 3,
+                                  color: grey,
+                                  style: BorderStyle.solid)),
+                          child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 10) +
+                                    EdgeInsets.symmetric(vertical: 5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                BouncingWidget(
+                                  duration: Duration(milliseconds: 100),
+                                  scaleFactor: 1.5,
+                                  onPressed: () async {},
+                                  child: Container(
+                                    child: Icon(
+                                      FontAwesomeIcons.minus,
+                                      size: 22,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Text(
+                                  "7",
+                                  style: TextStyle(
+                                      color: black,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                BouncingWidget(
+                                  duration: Duration(milliseconds: 100),
+                                  scaleFactor: 1.5,
+                                  onPressed: () async {},
+                                  child: Container(
+                                    child: Icon(
+                                      FontAwesomeIcons.plus,
+                                      size: 22,
+                                      color: black,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],

@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:chat_screen/utils/ScreenHeightAndWidth.dart';
 import '../utils/Colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,26 +8,7 @@ import 'package:flutter/painting.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:octo_image/octo_image.dart';
 
-
 class ProfileScreen extends StatefulWidget {
-  // String image;
-  // String description;
-  // String outDate;
-  // String author;
-  // String title;
-  // String category_name;
-  // String id;
-
-  // ProfilScreen({
-  //   this.image,
-  //   this.description,
-  //   this.outDate,
-  //   this.author,
-  //   this.title,
-  //   this.category_name,
-  //   this.id,
-  // });
-
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
@@ -114,7 +96,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: Center(
       child: Stack(
@@ -122,6 +103,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           CustomScrollView(
             slivers: <Widget>[
               SliverAppBar(
+                automaticallyImplyLeading: false,
                 backgroundColor: Colors.white,
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -130,7 +112,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       "Profile",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 32,
+                          fontSize: 25,
                           color: black),
                     ),
                     GestureDetector(
@@ -215,10 +197,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        //first section
                         Card(
                             child: Container(
-                          width: size.width,
+                          width: screenWidth(context),
                           child: Padding(
                             padding: EdgeInsets.symmetric(horizontal: 20),
                             child: Column(
