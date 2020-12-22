@@ -19,6 +19,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   //
   // Note: This is a GlobalKey<FormState>,
   final _formKey = GlobalKey<FormState>();
+  bool hidePassword = true; // set visibility of the password
 
   ///////////////Methods
 
@@ -57,6 +58,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       child: Column(
                         children: [
                           TextFormField(
+                            style: TextStyle(
+                                color: white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14),
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(color: white),
@@ -71,7 +76,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   color: white,
                                 ),
                                 hintText: 'Enter your user name',
-                                hintStyle: new TextStyle(color: white)
+                                hintStyle: new TextStyle(
+                                    color: white, fontWeight: FontWeight.bold)
                                 // labelText: 'User name',
                                 ),
                             validator: (value) {
@@ -85,6 +91,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             height: screenHeight(context) * 0.03,
                           ),
                           TextFormField(
+                            style: TextStyle(
+                                color: white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14),
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(color: white),
@@ -99,7 +109,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   color: white,
                                 ),
                                 hintText: 'Enter your email',
-                                hintStyle: new TextStyle(color: white)
+                                hintStyle: new TextStyle(
+                                    color: white, fontWeight: FontWeight.bold)
                                 // labelText: 'User name',
                                 ),
                             validator: (value) {
@@ -118,6 +129,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             height: screenHeight(context) * 0.03,
                           ),
                           TextFormField(
+                            style: TextStyle(
+                                color: white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14),
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(color: white),
@@ -129,9 +144,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 ),
                                 icon: Icon(Icons.lock, color: white),
                                 hintText: 'Enter your password',
-                                hintStyle: new TextStyle(color: white)
-                                // labelText: 'User name',
-                                ),
+                                hintStyle: new TextStyle(
+                                    color: white, fontWeight: FontWeight.bold),
+                                suffixIcon: GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      hidePassword = !hidePassword;
+                                    });
+                                  },
+                                  child: hidePassword == true
+                                      ? Icon(
+                                          Icons.visibility_off,
+                                          size: 20,
+                                          color: white,
+                                        )
+                                      : Icon(
+                                          Icons.visibility,
+                                          size: 20,
+                                          color: white,
+                                        ),
+                                )),
+                            obscureText: hidePassword,
                             validator: (value) {
                               if (value.isEmpty) {
                                 return 'Please enter your password';
@@ -146,8 +179,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               pressEvent: () {
                                 if (_formKey.currentState.validate()) {
                                   // If the form is valid, display a Snackbar.
-                                  Scaffold.of(context).showSnackBar(
-                                      SnackBar(content: Text('Processing Data')));
+                                  Scaffold.of(context).showSnackBar(SnackBar(
+                                      content: Text('Processing Data')));
                                 }
                               },
                               buttonText: "Register",

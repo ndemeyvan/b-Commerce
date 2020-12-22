@@ -1,6 +1,7 @@
 import 'package:chat_screen/Components/CustumButton.dart';
 import 'package:chat_screen/screens/HomeScreen.dart';
 import 'package:chat_screen/screens/SignUpScreen.dart';
+import 'package:flutter/cupertino.dart';
 
 import '../utils/Colors.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,7 @@ class _SignInScreenState extends State<SignInScreen> {
   //
   // Note: This is a GlobalKey<FormState>,
   final _formKey = GlobalKey<FormState>();
+  bool hidePassword = true; // set visibility of the password
 
   ///////////////Methods
 
@@ -59,23 +61,25 @@ class _SignInScreenState extends State<SignInScreen> {
                       child: Column(
                         children: [
                           TextFormField(
+                            style: TextStyle(color: white,fontWeight: FontWeight.bold,fontSize: 14),
                             decoration: InputDecoration(
-                                enabledBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: white),
-                                  //  when the TextFormField in unfocused
-                                ),
-                                focusedBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: white),
-                                  //  when the TextFormField in focused
-                                ),
-                                icon: Icon(
-                                  Icons.person,
-                                  color: white,
-                                ),
-                                hintText: 'Enter your user name',
-                                hintStyle: new TextStyle(color: white)
-                                // labelText: 'User name',
-                                ),
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: white),
+                                //  when the TextFormField in unfocused
+                              ),
+                              focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: white),
+                                //  when the TextFormField in focused
+                              ),
+                              icon: Icon(
+                                Icons.person,
+                                color: white,
+                              ),
+                              hintText: 'Enter your user name',
+                              hintStyle: new TextStyle(
+                                  color: white, fontWeight: FontWeight.bold),
+                              // labelText: 'User name',
+                            ),
                             validator: (value) {
                               if (value.isEmpty) {
                                 return 'Please enter your user name';
@@ -87,6 +91,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             height: screenHeight(context) * 0.03,
                           ),
                           TextFormField(
+                            style: TextStyle(color: white,fontWeight: FontWeight.bold,fontSize: 14),
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(color: white),
@@ -98,9 +103,27 @@ class _SignInScreenState extends State<SignInScreen> {
                                 ),
                                 icon: Icon(Icons.lock, color: white),
                                 hintText: 'Enter your password',
-                                hintStyle: new TextStyle(color: white)
-                                // labelText: 'User name',
-                                ),
+                                hintStyle: new TextStyle(
+                                    color: white, fontWeight: FontWeight.bold),
+                                suffixIcon: GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      hidePassword = !hidePassword;
+                                    });
+                                  },
+                                  child: hidePassword == true
+                                      ? Icon(
+                                          Icons.visibility_off,
+                                          size: 20,
+                                          color: white,
+                                        )
+                                      : Icon(
+                                          Icons.visibility,
+                                          size: 20,
+                                          color: white,
+                                        ),
+                                )),
+                            obscureText: hidePassword,
                             validator: (value) {
                               if (value.isEmpty) {
                                 return 'Please enter your password';
@@ -126,7 +149,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             height: screenHeight(context) * 0.03,
                           ),
                           FlatButton(
-                            onPressed: (){
+                            onPressed: () {
                               Navigator.of(context)
                                   .pushReplacementNamed(SignUpScreen.id);
                             },
@@ -134,12 +157,19 @@ class _SignInScreenState extends State<SignInScreen> {
                               text: TextSpan(
                                 style: TextStyle(fontSize: 10),
                                 children: <TextSpan>[
-                                  TextSpan(text: 'You do not have an account? ', ),
-                                  TextSpan(text: 'Create an account!',style: TextStyle(fontWeight: FontWeight.bold,color: orange)),
+                                  TextSpan(
+                                    text: 'You do not have an account? ',
+                                  ),
+                                  TextSpan(
+                                      text: 'Create an account!',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: orange)),
                                 ],
                               ),
                             ),
-                          )                      ],
+                          )
+                        ],
                       ))
                 ],
               ),
