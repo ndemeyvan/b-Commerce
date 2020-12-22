@@ -294,9 +294,6 @@ class ListOFDress extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         color: Colors.white,
-        // boxShadow: [
-        //   BoxShadow(color: Colors.green, spreadRadius: 3),
-        // ],
       ),
       width: size.width,
       height: 200,
@@ -315,7 +312,7 @@ class ListOFDress extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(5.0)),
                 child: Stack(children: [
                   Container(
-                    width: screenWidth(context) * 0.8,
+                    width: screenWidth(context) * 0.5,
                     child: Image.network(
                       '${articles[index]['image']}',
                       fit: BoxFit.cover,

@@ -1,6 +1,7 @@
 
 import 'package:chat_screen/screens/ChooseSignInOrSignUp.dart';
 import 'package:chat_screen/screens/DetailScreen.dart';
+import 'package:chat_screen/screens/GeneralPage.dart';
 import 'package:chat_screen/screens/HomeScreen.dart';
 import 'package:chat_screen/screens/SignUpScreen.dart';
 import 'package:chat_screen/screens/SigninScreen.dart';
@@ -32,6 +33,10 @@ class Routes {
       case DetailScreen.id:
         return MaterialPageRoute<Widget>(
             builder: (context) => DetailScreen());
+        break;
+      case GeneralScreen.id:
+        return MaterialPageRoute<Widget>(
+            builder: (context) => GeneralScreen());
         break;
 
       default:

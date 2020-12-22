@@ -5,6 +5,7 @@ import 'package:chat_screen/screens/SignUpScreen.dart';
 import '../utils/Colors.dart';
 import 'package:flutter/material.dart';
 import '../utils/ScreenHeightAndWidth.dart';
+import 'GeneralPage.dart';
 
 class SignInScreen extends StatefulWidget {
   static const String id = "SignInScreen";
@@ -115,7 +116,7 @@ class _SignInScreenState extends State<SignInScreen> {
                                 if (_formKey.currentState.validate()) {
                                   // If the form is valid, display a Snackbar.
                                   Navigator.of(context)
-                                      .pushNamed(HomeScreen.id);
+                                      .pushNamed(GeneralScreen.id);
                                 }
                               },
                               buttonText: "Login",
