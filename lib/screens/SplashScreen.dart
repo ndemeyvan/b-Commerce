@@ -22,55 +22,27 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [   Container(
-          color: white,
-          // decoration: BoxDecoration(
-          //   image: DecorationImage(
-          //     image: AssetImage('assets/images/shop.jpeg'),
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
-
-        ),
-
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              height: MediaQuery.of(context).size.height,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.bottomCenter,
-                  end: Alignment(
-                    Alignment.bottomCenter.x,
-                    1 - Alignment.bottomCenter.y,
-                  ),
-                  colors: [white, white],
-                ),
+      body:  Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(),
+          CircularProgressIndicator(),
+          Container(
+            margin: EdgeInsets.only(bottom: 20),
+            child: Text(
+              "B-commerce.",
+              style: TextStyle(
+                  fontSize: 28.0,
+                  color:black,
+                  letterSpacing: 2,
+                  fontFamily: "Pacifico"
               ),
-            ),
-          ),
-          Center(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  "B-commerce.",
-                  style: TextStyle(
-                    fontSize: 28.0,
-                    color:black,
-                    letterSpacing: 2,
-                      fontFamily: "Pacifico"
-                  ),
-                ),
-                SizedBox(height: 25,)
-              ],
             ),
           ),
 
         ],
-      ),
+      )
     );
   }
 }

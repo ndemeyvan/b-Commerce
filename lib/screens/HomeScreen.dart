@@ -55,9 +55,6 @@ class _HomeScreenState extends State<HomeScreen> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: Colors.white,
-          // boxShadow: [
-          //   BoxShadow(color: Colors.green, spreadRadius: 3),
-          // ],
         ),
         child: ClipRRect(
             child: Stack(
@@ -192,12 +189,41 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               items: imageSliders,
             ),
+
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
+
+                  SizedBox(
+                    height: 20,
+                  ),
+                  CategorySeparator(
+                    title: 'Categories',
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                ],
+              ),
+            ),
+
+
+            ListOFCategories(
+              categories: categories,
+              size: MediaQuery.of(context).size,
+            ),
+
+
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+
                   SizedBox(
                     height: 20,
                   ),
@@ -375,6 +401,91 @@ class ListOFDress extends StatelessWidget {
                                   fontWeight: FontWeight.bold))
                         ],
                       )),
+                ]),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+
+class ListOFCategories extends StatelessWidget {
+  final Size size;
+  final List categories;
+
+  ListOFCategories({@required this.size, @required this.categories});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(50),
+        color: Colors.white,
+      ),
+      width: size.width,
+      height: 70,
+      child: ListView.builder(
+        itemCount: pull.length,
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context, index) {
+          return GestureDetector(
+            onTap: (){
+              Navigator.of(context)
+                  .pushNamed(DetailScreen.id);
+            },
+            child: Card(
+              elevation: 1,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                child: Stack(children: [
+                  Container(
+                    width: screenWidth(context) * 0.5,
+                    child: Image.network(
+                      '${categories[index]['image']}',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+
+                  Positioned(
+                    bottom: 0.0,
+                    left: 0.0,
+                    right: 0.0,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color.fromARGB(200, 0, 0, 0),
+                            Color.fromARGB(0, 0, 0, 0)
+                          ],
+                          begin: Alignment.bottomCenter,
+                          end: Alignment.topCenter,
+                        ),
+                      ),
+                      padding:
+                      EdgeInsets.symmetric(vertical: 45.0, horizontal: 45.0),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Align(
+                        // bottom: 10,
+                        // left: 10,
+                      alignment: Alignment.centerLeft,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text('${categories[index]['name']}',
+                                style: TextStyle(
+                                    color: white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold)),
+                          ],
+                        )),
+                  ),
+
                 ]),
               ),
             ),
