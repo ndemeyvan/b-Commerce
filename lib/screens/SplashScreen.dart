@@ -27,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(),
-          CircularProgressIndicator(),
+          CupertinoActivityIndicator(),
           Container(
             margin: EdgeInsets.only(bottom: 20),
             child: Text(
